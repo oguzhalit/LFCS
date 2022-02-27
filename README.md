@@ -1,24 +1,28 @@
-# LFCS
-Preparation for Linux Foundation Certified System Administrator
-
+# Linux Fundamentals:
 - [Module 1: Essential Commands](#module-1-essential-commands)
     - [Lesson 1: Installing Linux](#lesson-1-installing-linux)
     - [Lesson 2: Using Essential Tools](#lesson-2-using-essential-tools)
     - [Lesson 3: Using Essential File Management Tools](#lesson-3-using-essential-file-management-tools)
     - [Lesson 4: Working With Text Files](#lesson-4-working-with-text-files)
     - [Lesson 5: Connecting to a Server](#lesson-5-connecting-to-a-server)
-    - [Lesson 6-1: Working with the Bash Shell](#lesson-6-working-with-the-bash-shell)
+    - [Lesson 6: Working with the Bash Shell](#lesson-6-working-with-the-bash-shell)
 - [Module 2: User and Group Management and Permissions](#module-2-user-and-group-management-and-permissions)
-    - [Lesson 6: Managing Users and Groups](#lesson-6-managing-users-and-groups)
-    - [Lesson 7: Managing Linux Permissions and Quota](#lesson-7-managing-linux-permissions-and-quota)
-    - [Lesson 8-1: Permissions Management](#lesson-8-management-permissions)
+    - [Lesson 7: User and Group Management](#lesson-6-managing-users-and-groups)
+    - [Lesson 8: Permissions Management](#lesson-7-managing-linux-permissions-and-quota)
     - [Lesson 9: Storage Management Essentials](#lesson-9-storage-management-essetials)
-- [Module 3-1:  Operating Running Systems](#module-3-operating-running-systems)
-- [Module 1-1: Advanced System Administration](#module-1-1-advanced-system-administration)
-- [Module 2-2: Managing Security Features](#module-2-2-managing-security-features)
-- [Module 3-3: Storage Management](#module-3-3-storage-management)
-- [Module 4-4: Managing SSH Services](#module-4-4-managing-ssh-services)
-- [Module 5-5: Managing Virtualization](#module-5-5-managing-virtualization)
+- [Module 3:  Operating Running Systems](#module-3-operating-running-systems)
+    - [Lesson 10: Managing Networking](#lesson-6-managing-users-and-groups)
+    - [Lesson 11: Managing Time](#lesson-7-managing-linux-permissions-and-quota)
+    - [Lesson 12: Working with Systemd](#lesson-9-storage-management-essetials)
+    - [Lesson 13: Process Management](#lesson-6-managing-users-and-groups)
+    - [Lesson 14: Managing Software](#lesson-7-managing-linux-permissions-and-quota)
+    - [Lesson 15: Scheduling Tasks](#lesson-9-storage-management-essetials)
+    - [Lesson 16: Reading Log Files](#lesson-7-managing-linux-permissions-and-quota)
+
+
+# LFCS
+Preparation for Linux Foundation Certified System Administrator
+
 - [Module 3: Networking](#module-3-networking)
     - [Lesson 8: Configuring Networking](#lesson-8-configuring-networking)
     - [Lesson 9: Configuring the SSH Service](#lesson-9-configuring-the-ssh-service)
@@ -48,6 +52,40 @@ Preparation for Linux Foundation Certified System Administrator
     - [Lesson 28: Configuring a Web Proxy](#lesson-28-configuring-a-web-proxy)
 - [Module 7: Managing Virtualization](#module-7-managing-virtualization)
     - [Lesson 29: Working with Virtual Machines](#lesson-29-working-with-virtual-machines)
+
+# LFCS
+Preparation for Linux Foundation Certified System Administrator
+
+- [Module 1-1: Advanced System Administration](#module-1-1-advanced-system-administration)
+    - [Lesson 1: An Introduction to Bash Shell Scripting](#lesson-6-managing-users-and-groups)
+    - [Lesson 2: Managing Local Security](#lesson-7-managing-linux-permissions-and-quota)
+    - [Lesson 3: Configuring Networking](#lesson-9-storage-management-essetials)
+    - [Lesson 4: Managing Advanced Systemd Features](#lesson-6-managing-users-and-groups)
+    - [Lesson 5: Configuring Logging](#lesson-7-managing-linux-permissions-and-quota)
+    - [Lesson 6: Basic Kernel Management](#lesson-9-storage-management-essetials)
+    - [Lesson 7: Managing the Boot Procedure](#lesson-6-managing-users-and-groups)
+- [Module 2-2: Managing Security Features](#module-2-2-managing-security-features)
+    - [Lesson 8: Configuring a Firewall](#lesson-6-managing-users-and-groups)
+    - [Lesson 9: Managing SELinux and AppArmor](#lesson-7-managing-linux-permissions-and-quota)
+- [Module 3-3: Storage Management](#module-3-3-storage-management)
+    - [Lesson 10: Managing Partitions](#lesson-6-managing-users-and-groups)
+    - [Lesson 11: Managing File Systems and Mounts](#lesson-7-managing-linux-permissions-and-quota)
+    - [Lesson 12: Managing LVM](#lesson-9-storage-management-essetials)
+    - [Lesson 13: Managing Software RAID](#lesson-7-managing-linux-permissions-and-quota)
+    - [Lesson 14: Managing User Quota](#lesson-9-storage-management-essetials)
+- [Module 4-4: Service Configuration](#module-4-4-managing-ssh-services)
+    - [Lesson 15: Managing SSH Services](#lesson-6-managing-users-and-groups)
+    - [Lesson 16: Managing Web Services](#lesson-7-managing-linux-permissions-and-quota)
+    - [Lesson 17: Configuring FTP Services](#lesson-9-storage-management-essetials)
+    - [Lesson 18: Configuring a Basic DNS Server](#lesson-7-managing-linux-permissions-and-quota)
+    - [Lesson 19: Providing NFS and CIFS File Shares](#lesson-9-storage-management-essetials)
+    - [Lesson 20: Configuring a Database Server](#lesson-7-managing-linux-permissions-and-quota)
+    - [Lesson 21: Configuring Basic Email Handling](#lesson-9-storage-management-essetials)
+    - [Lesson 22: Configuring a Web Proxy](#lesson-9-storage-management-essetials)
+- [Module 5-5: Managing Virtualization](#module-5-5-managing-virtualization)
+    - [Lesson 23: Working with Virtual Machines](#lesson-6-managing-users-and-groups)
+    - [Lesson 24: Working with Containers](#lesson-7-managing-linux-permissions-and-quota)
+    - [Lesson 25: Sample Exam](#lesson-9-storage-management-essetials)
 
 ## Module 1: Essential Commands
 
