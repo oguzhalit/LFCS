@@ -19,40 +19,6 @@
     - [Lesson 15: Scheduling Tasks](#lesson-15-storage-management-essetials)
     - [Lesson 16: Reading Log Files](#lesson-16-managing-linux-permissions-and-quota)
 
-
-# LFCS
-Preparation for Linux Foundation Certified System Administrator
-
-- [Module 3: Networking](#module-3-networking)
-    - [Lesson 8: Configuring Networking](#lesson-8-configuring-networking)
-    - [Lesson 9: Configuring the SSH Service](#lesson-9-configuring-the-ssh-service)
-    - [Lesson 10: Configuring a Firewall](#lesson-10-configuring-a-firewall)
-    - [Lesson 11: Configuring Time Services](#lesson-11-configuring-time-services)
-    - [Lesson 12-1: Working with systemd](#lesson-12-working-with-systemd)
-- [Module 4: Operating Running Systems](#module-4-operating-running-systems)
-    - [Lesson 12: Process Management](#lesson-12-process-management)
-    - [Lesson 13: Managing Software Packages](#lesson-13-managing-software-packages)
-    - [Lesson 14: Scheduling Tasks](#lesson-14-scheduling-tasks)
-    - [Lesson 15: Configuring Logging](#lesson-15-configuring-logging)
-    - [Lesson 16: Basic Kernel Management](#lesson-16-basic-kernel-management)
-    - [Lesson 16-1: Reading Log Files](#lesson-16-reading-log-files)
-    - [Lesson 17: Managing the Boot Process](#lesson-17-managing-the-boot-process)
-    - [Lesson 18: Managing SELinux and AppArmor](#lesson-18-managing-selinux-and-apparmor)
-- [Module 5: Storage Management](#module-5-storage-management)
-    - [Lesson 19: Managing Partitions](#lesson-19-managing-partitions)
-    - [Lesson 20: Managing LVM Logical Volumes](#lesson-20-managing-lvm-logical-volumes)
-    - [Lesson 21: Managing Software RAID](#lesson-21-managing-software-raid)
-- [Module 6: Service Configuration](#module-6-service-configuration)
-    - [Lesson 22: Managing Web Services](#lesson-22-managing-web-services)
-    - [Lesson 23: Configuring FTP Services](#lesson-23-configuring-ftp-services)
-    - [Lesson 24: Configuring a Basic DNS Server](#lesson-24-configuring-a-basic-dns-server)
-    - [Lesson 25: Providing NFS and CIFS File Shares](#lesson-25-providing-nfs-and-cifs-file-shares)
-    - [Lesson 26: Configuring a Database Server](#lesson-26-configuring-a-database-server)
-    - [Lesson 27: Configuring Basic E-mail Handling](#lesson-27-configuring-basic-e-mail-handling)
-    - [Lesson 28: Configuring a Web Proxy](#lesson-28-configuring-a-web-proxy)
-- [Module 7: Managing Virtualization](#module-7-managing-virtualization)
-    - [Lesson 29: Working with Virtual Machines](#lesson-29-working-with-virtual-machines)
-
 # LFCS - New
 Preparation for Linux Foundation Certified System Administrator
 
@@ -86,6 +52,40 @@ Preparation for Linux Foundation Certified System Administrator
     - [Lesson 23: Working with Virtual Machines](#lesson-23-managing-users-and-groups)
     - [Lesson 24: Working with Containers](#lesson-24-managing-linux-permissions-and-quota)
     - [Lesson 25: Sample Exam](#lesson-25-storage-management-essetials)
+
+
+# LFCS - Old
+Preparation for Linux Foundation Certified System Administrator
+
+- [Module 3: Networking](#module-3-networking)
+    - [Lesson 8: Configuring Networking](#lesson-8-configuring-networking)
+    - [Lesson 9: Configuring the SSH Service](#lesson-9-configuring-the-ssh-service)
+    - [Lesson 10: Configuring a Firewall](#lesson-10-configuring-a-firewall)
+    - [Lesson 11: Configuring Time Services](#lesson-11-configuring-time-services)
+    - [Lesson 12-1: Working with systemd](#lesson-12-working-with-systemd)
+- [Module 4: Operating Running Systems](#module-4-operating-running-systems)
+    - [Lesson 12: Process Management](#lesson-12-process-management)
+    - [Lesson 13: Managing Software Packages](#lesson-13-managing-software-packages)
+    - [Lesson 14: Scheduling Tasks](#lesson-14-scheduling-tasks)
+    - [Lesson 15: Configuring Logging](#lesson-15-configuring-logging)
+    - [Lesson 16: Basic Kernel Management](#lesson-16-basic-kernel-management)
+    - [Lesson 16-1: Reading Log Files](#lesson-16-reading-log-files)
+    - [Lesson 17: Managing the Boot Process](#lesson-17-managing-the-boot-process)
+    - [Lesson 18: Managing SELinux and AppArmor](#lesson-18-managing-selinux-and-apparmor)
+- [Module 5: Storage Management](#module-5-storage-management)
+    - [Lesson 19: Managing Partitions](#lesson-19-managing-partitions)
+    - [Lesson 20: Managing LVM Logical Volumes](#lesson-20-managing-lvm-logical-volumes)
+    - [Lesson 21: Managing Software RAID](#lesson-21-managing-software-raid)
+- [Module 6: Service Configuration](#module-6-service-configuration)
+    - [Lesson 22: Managing Web Services](#lesson-22-managing-web-services)
+    - [Lesson 23: Configuring FTP Services](#lesson-23-configuring-ftp-services)
+    - [Lesson 24: Configuring a Basic DNS Server](#lesson-24-configuring-a-basic-dns-server)
+    - [Lesson 25: Providing NFS and CIFS File Shares](#lesson-25-providing-nfs-and-cifs-file-shares)
+    - [Lesson 26: Configuring a Database Server](#lesson-26-configuring-a-database-server)
+    - [Lesson 27: Configuring Basic E-mail Handling](#lesson-27-configuring-basic-e-mail-handling)
+    - [Lesson 28: Configuring a Web Proxy](#lesson-28-configuring-a-web-proxy)
+- [Module 7: Managing Virtualization](#module-7-managing-virtualization)
+    - [Lesson 29: Working with Virtual Machines](#lesson-29-working-with-virtual-machines)
 
 ## Module 1: Essential Commands
 
