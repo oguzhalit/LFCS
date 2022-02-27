@@ -53,7 +53,7 @@ Preparation for Linux Foundation Certified System Administrator
 - [Module 7: Managing Virtualization](#module-7-managing-virtualization)
     - [Lesson 29: Working with Virtual Machines](#lesson-29-working-with-virtual-machines)
 
-# LFCS
+# LFCS - New
 Preparation for Linux Foundation Certified System Administrator
 
 - [Module 1-1: Advanced System Administration](#module-1-1-advanced-system-administration)
