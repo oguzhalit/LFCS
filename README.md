@@ -142,6 +142,9 @@ Lesson 2 Command Review
 * ``` mandb ```
 * ``` pinfo ```
 
+Lesson 2 Lab: Using Essential Tools
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-1.png)
+
 ###### Common bash features
 
 - stdin or '<' redirect standard input
