@@ -501,6 +501,20 @@ Access for specific users managed by **visudo** command.
 ###### 5.7 Understanding the Use of etc securetty
 - ``` vim /etc/securetty ``` - list of secure TTY's. Here you can include or exclude list of terminals. 
 
+###### Lesson 5 Command Review
+
+* ```su```
+* ```sudo```
+* ```chvt``
+* ```ssh```
+* ```ssh-keygen```
+* ```ssh-copy-id```
+* ```scp```
+
+
+###### Lab Questions
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-4.png)
 
 ## Module 2: User and Group Management and Permissions
 ### Lesson 6: Managing Users and Groups
