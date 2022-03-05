@@ -422,20 +422,47 @@ Undo:
 - ``` egrep 'ab?c' grepfile1 ``` - null or one preceeding character, can be - 'aac', 'ac', 'abc'
 
 ###### 4.9 Using Common Text Processing Utilities
+
+* ```cut```: filter output from a text file
+* ```sort```: sort files, often used in pipes
+* ```tr```: translates uppercase to lowercase
+* ```awk```: search for specific patterns
+* ```sed```: powerful stream editor to batch-modify text files
+
 - ``` cut -d : -f 3 /etc/passwd | sort -n ``` - filter out text from */etc/passwd* by using delimeter *:*, *-f 3* - is a third field. Sort by numbers use '-n'
 - ``` cut -d : -f 1 /etc/passwd | sort ``` - filter out text from */etc/passwd* by using delimeter *:*, *-f 1* - is a first field. Sort by characters'
 - ``` cut -d : -f 1 /etc/passwd | sort | tr [:lower:] [:upper:] ``` - translate output from lower to uppercase
 - ``` echo hello | tr [a-z] [A-Z]``` - translate output from lower to uppercase
 - ``` awk -F : '{print $1}' /etc/passwd ``` - same as *cut* but more powerful 
 - ``` sed -i -e  '10d' grepfile1 ``` - streamline editor, *-i* interactor, *-e* edit. We removed line 10 from grepfile1
+- 
+###### Lesson 4 Command Review
+
+* ```vim```
+* ```more```
+* ```less``
+* ```head```
+* ```tail```
+* ```cat```
+* ```tac```
+* ```grep```
+* ```awk```
+* ```sed```
+* ```tr```
+* ```cut```
+* ```sort```
+
+###### Lab Questions
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-3.png)
 
 ###### Lab Solutions
-- ``` head -n 5 /etc/passwd | tail -n 1 ```
-- ``` sed -n '5p' /etc/passwd ``` 
-- ``` ps aux | awk '{print $1}' ```
-- ``` grep '^root' /etc/* 2>/dev/null ```
-- ``` grep '^...$' /etc/* 2>/dev/null ``` 
-- ``` grep alex * | grep -v alexander  ```  
+- Q1: ``` head -n 5 /etc/passwd | tail -n 1 ```
+- Q2: ``` sed -n '5p' /etc/passwd ``` 
+- Q3: ``` ps aux | awk '{print $1}' ```
+- Q4: ``` grep '^root' /etc/* 2>/dev/null ```
+- Q5: ``` grep '^...$' /etc/* 2>/dev/null ``` 
+- Q6: ``` grep '\<alex\>' * ```  
 
 ### Lesson 5: Connecting to a Server
 ###### 5.1 Working as Root or a Local User
