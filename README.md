@@ -655,7 +655,7 @@ As you can see from image here we can configure number of maximum processes, max
 
 * ```useradd```
 * ```usermod```
-* ```userdel``
+* ```userdel```
 * ```groupadd```
 * ```groupmod```
 * ```groupdel```
@@ -671,7 +671,7 @@ As you can see from image here we can configure number of maximum processes, max
 
 ###### Lab Questions
 
-![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-5.png)
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-7.png)
 
 ###### Lab Solutions
 
