@@ -8,7 +8,7 @@
     - [Lesson 6: Working with the Bash Shell](#lesson-6-working-with-the-bash-shell)
 - [Module 2: User and Group Management and Permissions](#module-2-user-and-group-management-and-permissions)
     - [Lesson 7: User and Group Management](#lesson-7-managing-users-and-groups)
-    - [Lesson 8: Permissions Management](#lesson-7-managing-linux-permissions-and-quota)
+    - [Lesson 8: Permissions Management](#lesson-8-managing-linux-permissions-and-quota)
     - [Lesson 9: Storage Management Essentials](#lesson-9-storage-management-essetials)
 - [Module 3:  Operating Running Systems](#module-3-operating-running-systems)
     - [Lesson 10: Managing Networking](#lesson-10-managing-users-and-groups)
@@ -559,6 +559,13 @@ Access for specific users managed by **visudo** command.
 - /etc/bashrc is processed every time a subshell is started
   * A user-specific ~/.bashrc file may be used
 
+###### Lesson 6 Command Review
+
+* ```sort```
+* ```tee```
+* ```history```
+* ```alias```
+* ```export```
 
 ###### Lab Questions
 
@@ -571,51 +578,65 @@ Access for specific users managed by **visudo** command.
 - Q3: ``` alias ```
 
 ## Module 2: User and Group Management and Permissions
-### Lesson 6: Managing Users and Groups
-###### 6.2 Understanding the Role of Ownership
+### Lesson 7: Managing Users and Groups
+###### 7.2 Understanding File Ownership
 Users as groups can have access to resources, files, directories e.t.c
 - ``` id ``` - get information about users
 - ``` id linda ``` - information about linda user 
 - ``` gid=1000(student) ``` - means that primary group for student user is **student** group
 
-###### 6.3 Creating Users with useradd and adduser
+###### 7.3 Creating Users with useradd and adduser
 - ``` useradd -D ``` - create user by using default options
+- ``` useradd -c 'the boss' -G wheel -s /bin/passwd bob ```
 - ``` useradd -s /bin/zsh -c "my user" -m anna ``` - create user on CentOs
 - ``` adduser kate ``` - you will be promted for all requrired information on Ubuntu 
 
-###### 6.4 Creating Groups with groupadd
+###### 7.4 Creating Groups with groupadd
 - ``` groupadd sales ``` - create group **sales**
 - ``` usermod -aG sales anna ``` - add user to the group **sales**, where **-a** means append to the group
 
-###### 6.5 Managing User and Group Properties
+###### 7.5 Managing User and Group Properties
+- ``` w ```  show currenly login user
+- ``` who ``` who like w 
+- ``` getent passwd user ``` specific user information
 - ``` usermod -L anna  ``` - lock the user
 - ``` useromd -U annd ``` - unlock the user
+- ``` usermod -aG wheel amy ``` - add wheel group amy
 - ``` userdel -r ``` - remove user, it's home directory and mail spool
 - ``` groupdel ``` - remove group
 - ``` groupmod ``` - modify properties of the existing group 
 
-###### 6.6 Configuring Defaults for Creating Users
+###### 7.6 Configuring Defaults for Creating Users
 We have */etc/default* directory, where *useradd* file can be modified. That one refers to the *useradd -D* option. Default user properties. 
 
 - ``` /etc/login.defs ``` - mail spool location, password expire days, length, age. UID and GID information. 
 - ``` /etc/skel/ ``` - items inside of skel directory will be copied to the home directory of newle created user
+- ``` /etc/default/useradd ``` - change default useradd properties
+- ``` /etc/shadow ``` - information password 
 
-###### 6.7 Managing Password Properties
+###### 7.7 Managing Password Properties
 - ``` passwd --help ``` - settings for passwd command
 - ``` echo password | passwd --stdin brenda ``` - update password for brenda user. Can be scripted. 
 - ``` chage brenda ``` - change age of the password for brenda user
 
-###### 6.8 Understanding User Configuration Files
+###### 7.8 Understanding User Configuration Files
 - ``` /etc/passwd ``` and ``` /etc/shadow ``` - information stored about users in these folders
 - ``` vipw ``` - vi for passwd, modify contents of /etc/passwd directly
-
-###### 6.9 Understanding Group Configuration Files
 - ``` /etc/group ``` - group configuration files. Primary groups don't have members because they declared already in */etc/passwd* as primary group. We can manage members here of secondary groups. 
 
-###### 6.10 Understanding Login on External Authentication Sources
+###### 7.9 Understanding Session Management
+
+- ```who``` and ```w``` show is currently logged in
+- ```loginctl``` allows for current session management
+  * ``` loginctl list-sessions ```
+  * ``` loginctl show-sessions <id> ```
+  * ``` loginctl show-user <username> ``` 
+  * ``` loginctl terminate-session <session-id> ```
+
+###### 7.10 Understanding Login on External Authentication Sources
 Setting up remote authentication can be difficult. Can be done on **Active Directory** or **LDAP** 
 
-###### 6.11 Configuring Login on External Authentication Sources
+###### 7.11 Configuring Login on External Authentication Sources
 First of all we need to install proper software
 
 - ``` yum groups install "Directory Client" ``` - software required for external authentication 
@@ -623,15 +644,41 @@ First of all we need to install proper software
 
 ![img](https://github.com/Bes0n/LFCS/blob/master/images/img6.JPG)
 
-###### 6.12 Configuring Resource Access Restrictions
+###### 7.12 Configuring Resource Access Restrictions
 - ``` cd /etc/security ``` then ``` vim limits.conf ``` - here we can configure limits of resources provided to the users.
 
 ![img](https://github.com/Bes0n/LFCS/blob/master/images/img7.JPG)
 
 As you can see from image here we can configure number of maximum processes, maxlogins, cores usage and so on.
 
-### Lesson 7: Managing Linux Permissions and Quota
-###### 7.1 Understanding Basic Linux Permissions
+###### Lesson 7 Command Review
+
+* ```useradd```
+* ```usermod```
+* ```userdel``
+* ```groupadd```
+* ```groupmod```
+* ```groupdel```
+* ```id```
+* ```getent```
+* ```passwd```
+* ```chage```
+* ```w```
+* ```who```
+* ```vipw```
+* ```vigr```
+* ```loginctl```
+
+###### Lab Questions
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-5.png)
+
+###### Lab Solutions
+
+
+
+### Lesson 8: Managing Linux Permissions and Quota
+###### 8.1 Understanding Basic Linux Permissions
 - Basic Permissions (file or directory):
     * Read **(4)** - you can read file or list items in that directory
     * Write **(2)** - modify contents of the file, create or delete files inside of directory
