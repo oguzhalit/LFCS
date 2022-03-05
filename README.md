@@ -535,6 +535,40 @@ Access for specific users managed by **visudo** command.
   * ``` ps aux | grep http ```
   * ``` ps aux | tee psfile | grep ssh ```
 
+###### 6.3 Working with history
+
+- Commands a user types are written to ~/.bash_history
+- ``` history -c ``` to clear the current history
+- ``` history -w ``` to write the current history
+- ``` !nn ``` to repeat a specific line from history
+
+###### 6.5 Using Variables
+
+- A variable is a label to which a dynamic value can be assigned
+- ``` varname=value ``` define var
+- ``` echo $varname ``` read var
+- ``` env ``` print env
+
+###### 6.7 Bash Startup files
+
+- /etc/environment contains a list of variables and is the first file
+  that is processed while starting bash
+- /etc/profile is executed while users login
+  * ~/.bash_profile can be used as a user-specific version
+  * ~/.bash_logout is processed when a user logs out
+- /etc/bashrc is processed every time a subshell is started
+  * A user-specific ~/.bashrc file may be used
+
+
+###### Lab Questions
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-5.png)
+
+###### Lab Solutions
+
+- Q1: ``` alias ipconfig='ip addr show' ```
+- Q2: ``` export COLOR=red ```
+- Q3: ``` alias ```
 
 ## Module 2: User and Group Management and Permissions
 ### Lesson 6: Managing Users and Groups
