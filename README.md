@@ -128,33 +128,6 @@ Examples:
 - ``` pinfo coreutils ``` information commands
 - ``` su - ``` - switch for root user
 
-Lesson 2 Command Review
-
-* ``` whoami ```
-* ``` hostname ```
-* ``` date ```
-* ``` uname ```
-* ``` passwd ```
-* ``` touch ```
-* ``` last ```
-* ``` man ```
-* ``` apropos ```
-* ``` mandb ```
-* ``` pinfo ```
-
-Lesson 2 Lab: Using Essential Tools
-
-![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-1.png)
-
-Lesson 2 Lab Solution
-
-* Q1: ```  man -k kernel | grep info ```
-    - ```  uname -v ```
-* Q2: ```  man -k hostname ```
-   -  ```  hostnamectl set-hostname NAME ```
-* Q3: ```  lvcreate --help ```
- 
-
 ###### Common bash features
 
 - stdin or '<' redirect standard input
@@ -173,7 +146,28 @@ Lesson 2 Lab Solution
 * ``` chmod +x myscript ``` - make your script executable
 * ``` ./myscript ``` - run your script 
 
+###### Lesson 2 Command Review
+
+* ``` whoami ```
+* ``` hostname ```
+* ``` date ```
+* ``` uname ```
+* ``` passwd ```
+* ``` touch ```
+* ``` last ```
+* ``` man ```
+* ``` apropos ```
+* ``` mandb ```
+* ``` pinfo ```
+
+###### Lab questions 
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-1.png)
+
 ###### Lab answers 
+* Q1: ```  man -k kernel | grep info ```
+* Q2: ```  man -k hostname ```
+* Q3: ```  lvcreate --help ```
+
 * ``` uname -r ``` - get kernel version
 * ``` hostnamectl set-hostname ``` - change hostname 
 * ``` nmtui-hostname ``` - change hostname from gui on CentOS
