@@ -149,9 +149,9 @@ Lesson 2 Lab: Using Essential Tools
 Lesson 2 Lab Solution
 
 * Q1: ```  man -k kernel | grep info ```
-      ```  uname -v ```
+    - ```  uname -v ```
 * Q2: ```  man -k hostname ```
-      ```  hostnamectl set-hostname NAME ```
+   -  ```  hostnamectl set-hostname NAME ```
 * Q3: ```  lvcreate --help ```
  
 
