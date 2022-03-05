@@ -309,6 +309,36 @@ symhosts symbolic link refers to the myhosts hard link:
 - ``` tar -xvf my_archive -C my_dir``` - extract to file my_dir
 - ``` tar -tvf ``` - show contents of an archive
 
+###### Lesson 3 Command Review
+
+* ```ls```
+* ```cp```
+* ```mkdir```
+* ```rmdir```
+* ```mv```
+* ```rm```
+* ```ln```
+* ```find```
+* ```tar```
+* ```gzip```
+* ```bzip2```
+* ```zip```
+* ```file```
+
+###### Lab questions 
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-2.png)
+
+
+###### Lab answers 
+
+* Q1: ``` mkdir -p /tmp/files/pictures /tmp/files/photos /tmp/files/videos ```
+* Q2: ``` cp /etc/[a-c]* /tmp/files
+* Q3: ``` mv /tmp/files/[a,b]* /tmp/files/photos/ ``` - ``` mv /tmp/files/[c]* /tmp/files/videos/ ```
+* Q4: ``` find /etc -type -f -size -1000c -exec cp {} /tmp/files/pictures/ \;
+* Q5: ``` ln -s /var /tmp/files
+* Q6: ``` tar cvfz my_archive.tgz /home
+* Q7: ``` mkdir /tmp/archive && tar xvf my_archive.tgz /tmp/archive ```
+
 ### Lesson 4: Working With Text Files
 ###### 4.1 Understanding How to work with vim
 
