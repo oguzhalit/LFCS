@@ -332,11 +332,11 @@ symhosts symbolic link refers to the myhosts hard link:
 ###### Lab answers 
 
 * Q1: ``` mkdir -p /tmp/files/pictures /tmp/files/photos /tmp/files/videos ```
-* Q2: ``` cp /etc/[a-c]* /tmp/files
+* Q2: ``` cp /etc/[a-c]* /tmp/files ```
 * Q3: ``` mv /tmp/files/[a,b]* /tmp/files/photos/ ``` - ``` mv /tmp/files/[c]* /tmp/files/videos/ ```
-* Q4: ``` find /etc -type -f -size -1000c -exec cp {} /tmp/files/pictures/ \;
-* Q5: ``` ln -s /var /tmp/files
-* Q6: ``` tar cvfz my_archive.tgz /home
+* Q4: ``` find /etc -type -f -size -1000c -exec cp {} /tmp/files/pictures/ \; ```
+* Q5: ``` ln -s /var /tmp/files ```
+* Q6: ``` tar cvfz my_archive.tgz /home ```
 * Q7: ``` mkdir /tmp/archive && tar xvf my_archive.tgz /tmp/archive ```
 
 ### Lesson 4: Working With Text Files
