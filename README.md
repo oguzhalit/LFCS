@@ -116,13 +116,31 @@ By using ``` man ``` we will work with following sections:
 8. Sysadmin commands (8)
 
 Examples:
+- ``` man man ``` - show information man
 - ``` man 8 useradd ``` - show information about command from section 8 
 - ``` man -a passwd ``` - show information about command from all sections
 - ``` man -k ``` - using manual with keyword, when you don't know which command to use 
 - ``` appropos user ``` - same results as for ``` man -k ``` command 
 - ``` man -k | grep 8 ``` - search for section 8
+- ``` man -k user | grep 8 | grep create ``` - search for section 8 and find create use commands
 - ``` sudo mandb ``` - create or update the manual page index caches
+- ``` info coreutils ``` informantion 
+- ``` pinfo coreutils ``` information commands
 - ``` su - ``` - switch for root user
+
+Lesson 2 Command Review
+
+* ``` whoami ```
+* ``` hostname ```
+* ``` date ```
+* ``` uname ```
+* ``` passwd ```
+* ``` touch ```
+* ``` last ```
+* ``` man ```
+* ``` apropos ```
+* ``` mandb ```
+* ``` pinfo ```
 
 ###### Common bash features
 
