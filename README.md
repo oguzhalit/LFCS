@@ -519,6 +519,23 @@ Access for specific users managed by **visudo** command.
 
 ### Lesson 6: Working with the bash shell
 
+###### 6.2 Using I/O Redirection And Piping
+
+- Standard İnput (0): <
+  * ``` sort < /etc/services ```
+- Standard Output (1): >
+  * ``` ls > ~/myfile ```
+  * ``` who >> ~/myfile ```
+- Standard Error (2): 2>
+  * ``` grep -R root /proc 2>/dev/null ```
+  * ``` grep -R root /etc &> ~/myfile ```
+
+- Piping
+  A pipe is used to send the output of one command to be used as input for a second command
+  * ``` ps aux | grep http ```
+  * ``` ps aux | tee psfile | grep ssh ```
+
+
 ## Module 2: User and Group Management and Permissions
 ### Lesson 6: Managing Users and Groups
 ###### 6.2 Understanding the Role of Ownership
