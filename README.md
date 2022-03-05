@@ -143,7 +143,17 @@ Lesson 2 Command Review
 * ``` pinfo ```
 
 Lesson 2 Lab: Using Essential Tools
+
 ![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-1.png)
+
+Lesson 2 Lab Solution
+
+* Q1: ```  man -k kernel | grep info ```
+      ```  uname -v ```
+* Q2: ```  man -k hostname ```
+      ```  hostnamectl set-hostname NAME ```
+* Q3: ```  lvcreate --help ```
+ 
 
 ###### Common bash features
 
