@@ -465,6 +465,7 @@ Undo:
 - Q6: ``` grep '\<alex\>' * ```  
 
 ### Lesson 5: Connecting to a Server
+
 ###### 5.1 Working as Root or a Local User
 - ``` su - ``` - log on as root
 - ``` sudo su - ``` or ``` sudo -i ``` - log on as root on ubuntu
@@ -515,6 +516,8 @@ Access for specific users managed by **visudo** command.
 ###### Lab Questions
 
 ![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-4.png)
+
+### Lesson 6: Working with the bash shell
 
 ## Module 2: User and Group Management and Permissions
 ### Lesson 6: Managing Users and Groups
