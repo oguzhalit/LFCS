@@ -180,8 +180,19 @@ Hierarchy:
 * / - root directory
     * /boot - files need to start your computer's OS
     * /home - loc of user home directories
-    * /usr - operating system files 
-    * /var - diverse information (log, cache)
+    * /usr  - operating system files 
+    * /var  - diverse information (log, cache)
+    * /bin  - regular binaries
+    * /sbin - system binaries
+    * /dev  - stand devices, all device files
+    * /etc  - configuration files
+    * /opt  - application files
+    * /proc - interface to linux kernel
+    * /run  - new temp dir, processis that temporarily need to write files
+    * /srv  - store document for services, like FTP,Web Servers
+    * /sys  - hardware information
+    * /tmp  - old temp dir, automatic clean reboot
+    * /var  - dynamically can be created by the operating system
 
 * mount - connection between directory and device
     * ``` /dev/sdb1 ``` - 
@@ -291,7 +302,7 @@ symhosts symbolic link refers to the myhosts hard link:
 - ``` grep student /etc/* 2>/dev/null ``` - grep will look for files, which contains 'student' word inside
 - ``` find /etc -exec grep -l student {} \; 2>dev/null ``` - find files through grep which contains 'student' word inside 
 - ``` find /etc -exec grep -l student {} \; -exec cp {} find/contents/ \; 2>/dev/null ``` - cp all found files in 'find/contents/' directory and avoid any error messages. 
-
+- ``` find * -name '*' -type f  | xargs grep "student"``` - find file in student
 
 ### Lesson 4: Working With Text Files
 ###### 4.1 Understanding How to work with vim
