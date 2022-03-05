@@ -304,6 +304,11 @@ symhosts symbolic link refers to the myhosts hard link:
 - ``` find /etc -exec grep -l student {} \; -exec cp {} find/contents/ \; 2>/dev/null ``` - cp all found files in 'find/contents/' directory and avoid any error messages. 
 - ``` find * -name '*' -type f  | xargs grep "student"``` - find file in student
 
+###### 3.13 Archiving Files with tar
+- ``` tar -cvf my_archive.tar /home ``` -  create tar my_archive.tar, content /home
+- ``` tar -xvf my_archive -C my_dir``` - extract to file my_dir
+- ``` tar -tvf ``` - show contents of an archive
+
 ### Lesson 4: Working With Text Files
 ###### 4.1 Understanding How to work with vim
 
