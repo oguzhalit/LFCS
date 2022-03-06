@@ -920,7 +920,7 @@ Put limitation to the user for using disk space.
 - Q3: ``` mount /dev/sdb2 /mnt ```
 
 ## Module 3: Networking
-### Lesson 9: Configuring Networking
+### Lesson 10: Configuring Networking
 ###### 9.1 Summarizing IPv4 Basics
 ![img](https://github.com/Bes0n/LFCS/blob/master/images/img8.JPG)
 
