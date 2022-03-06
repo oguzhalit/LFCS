@@ -677,9 +677,9 @@ As you can see from image here we can configure number of maximum processes, max
 
 - Q1: ``` useradd username ```
 - Q2: ``` vim /etc/login.defs ``` change pass_max_days to 60
-- Q3: ``` groupadd sale ```
-- Q4: ``` groupadd account ``` 
-- Q5: ``` groupadd users ```
+- Q3: ``` groupadd sales ``` - ``` useradd -G sales linda ```
+- Q4: ``` groupadd account ``` - ``` useradd -G account anna ```
+- Q5: ``` groupadd users ``` - ``` useradd -G users lisa```
 - Q6: ``` echo password | passwd --stdin linda ```
 - Q7: ``` vim /etc/default/useradd ``` change to HOME=/home 
 
