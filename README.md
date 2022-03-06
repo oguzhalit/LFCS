@@ -704,28 +704,42 @@ As we understand number **7** is a sum of **4**(read) + **2**(write)+ **1**(exec
 
 **0** means that others will don't have any permissions for that file 
 
-###### 7.2 Managing Basic Linux Permissions
+###### 8.2 Managing Basic Linux Permissions
 - ``` chgrp  sales mydirectory ``` - make group **sales** as an owner of **mydirectory** directory
 - ``` chown anna mydirectory ``` - make user **anna** as an owner of **mydirectory** directory
 - ``` chown linda:sales mydirectory ``` or ```chown linda.sales mydirectory```  - make **linda** user and **sales** group as an owner of **mydirectory** directory in one command 
 - ``` chmod g+w account ``` - add write group permission to account directory
 - ``` chmod o-rx account ``` - remove read and execute permissions from account directory for others
 
-###### 7.3 Understanding Advanced Linux Permissions
+###### 8.3 Understanding Advanced Linux Permissions
 Advanced permissions:
 - **suid** (4) - set user id. Run file as owner. Dangerous permission.
 - **sgid** (2) - set group id. Run as group owner. Also dangerous permission. Inherit directory group owner. 
 - **sticky** (1) - sticky bit. Has no meaning on files. Delete if only owner for directory. 
 
 
-###### 7.4 Managing Advanced Linux Permissions
+###### 8.4 Managing Advanced Linux Permissions
 - ``` chmod u+s playme ``` - set permissions as represantive to file. 
 - ``` /bin/passwd ``` - using same permissions set by **suid**
 
 - ``` chmod g+s * ``` - set group id for directory to use shared directory. Group ownership will be set from parent directory. 
 - ``` chmod +t * ``` - add sticky bit to the files. File can't be removed by other users if sticky bit applied inside of shared directory. 
 
-###### 7.5 Understanding Access Control Lists
+###### 8.4.1 Managing umask
+
+- Default permissions are set by the umask
+
+* umask is a shell setting that define a mask that will be subtracted from the default perm
+* Default perm on dir are 777
+* Default perm on file are 666
+* umask 022 wil set default perm on files to 644
+* umask 027 wil set default perm on dir to 750
+
+- ``` umask ``` current umask
+- ``` /etc/profile && ~/. bash_profile ``` change umask permanent
+- umask - 
+
+###### 8.5 Understanding Access Control Lists
 Two types of ACL:
 * normal - take care of files that already exists 
 * default - take care of files that will be created
@@ -735,7 +749,7 @@ Two types of ACL:
 
 To use ACL we need filesystem acl. Without this option we couldn't use ACL
 
-###### 7.6 Managing Access Control Lists
+###### 8.6 Managing Access Control Lists
 - ```setfacl -R -m g:sales:rx account``` - group **sales** need read and execute for **account** directory
 - ```getfacl account/``` - get information about access list
 
@@ -769,13 +783,13 @@ default:other::---
 ```
 
 
-###### 7.7 Understanding Extended Attributes
+###### 8.7 Understanding Extended Attributes
 Extended Attributes - properties of files only. 
 Commands: 
 * chattr
 * lsattr 
 
-###### 7.8 Managing Extended Attributes
+###### 8.8 Managing Extended Attributes
 - ```chattr +i file1``` - add immutable attribute to the **file1**
 - ```lsattr file1``` - get information about attribute. 
 ```
@@ -794,10 +808,10 @@ rm: cannot remove ‘file1’: Operation not permitted
 Except: 
 - ``` chattr -i file1 ``` - remove immutable attribute from the **file1**
 
-###### 7.9 Understanding Linux File System Quota
+###### 8.9 Understanding Linux File System Quota
 Put limitation to the user for using disk space. 
 
-###### 7.10 Managing Quota on Ext File Systems
+###### 8.10 Managing Quota on Ext File Systems
 - ```yum install -y quota``` - install required software
 - ```vim /etc/fstab``` - mounting systems quota automatically
 - ```chmod -R 777 /quota``` - full access for /quota directory
@@ -806,13 +820,33 @@ Put limitation to the user for using disk space.
 - ```quota -vu lisa``` - checking what is user **lisa** using 
 - ``` repquota -aug ``` - get information about quota limits for users
 
-###### 7.11 Managing Quota on XFS File Systems
+###### 8.11 Managing Quota on XFS File Systems
 - ``` xfs_quota --help ``` or ```man xfs_quota```
 
-###### 7.12 Finding Files with Specific Permissions
+###### 8.12 Finding Files with Specific Permissions
 - ```man find``` - look for **perm**
 - ```find . -perm 0600 -exec ls -l {} \; ``` - find files in /etc with special permissions and list items. 
 - ``` find . -perm /4000 -exec ls -l {} \; ``` - items which have set user id permission mode. 
+
+###### Lesson 8 Command Review
+
+* ``` chown ```
+* ``` chgrp ```
+* ``` umask ```
+* ``` chmod ```
+
+###### Lab Questions
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-8.png)
+
+###### Lab Solutions
+
+- Q1: ``` umask 077 ```
+- Q2: ``` mkdir -p /data/sales /data/account ```
+- Q3: ``` chgrp sales /data/sales && chmod g+rw /data/sales ```
+- Q4: ``` chmod +t /data/sales ```
+- Q5: ``` chown anna /data/sales ```
+
 
 ## Module 3: Networking
 ### Lesson 8: Configuring Networking
