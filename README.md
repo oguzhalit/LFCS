@@ -541,6 +541,7 @@ Access for specific users managed by **visudo** command.
 - ``` history -c ``` to clear the current history
 - ``` history -w ``` to write the current history
 - ``` !nn ``` to repeat a specific line from history
+- ``` !ec ``` to repeat a echo ""
 
 ###### 6.5 Using Variables
 
@@ -848,9 +849,79 @@ Put limitation to the user for using disk space.
 - Q5: ``` chown anna /data/sales ```
 
 
+### Lesson 9: Storage Management Essentials
+
+###### 9.2 Creating MBR Partitions
+
+- ``` lsblk ``` list block devices 
+- ``` fdisk /dev/sdb ``` create partition
+  * ``` m ``` for help
+  * ``` p ``` print
+  * ``` n ``` create new partition
+  * ``` p ``` primary partition
+  * ``` 1 ``` partition number
+  * ``` 2048 ``` first sector
+  * ``` 10485 ``` last sector
+  * ``` p ``` print view new part
+  * ``` w ``` write new part
+- ``` cat /proc/partitions ``` have partitions
+- ``` partprobe ``` after adding partititons 
+- ``` cat /proc/partitions ``` then view new part
+
+###### 9.3 Creating GPT Partitions
+
+- ``` gdisk /dev/sdb ``` create part
+  * ``` ? ``` for help
+  * ``` p ``` print
+  * ``` n ``` create new part
+  * ``` 1 ``` part number
+  * ``` 2048 ``` first sector
+  * ``` +2G ``` last sector
+  * ``` 8300 ``` lfs
+  * ``` p ``` view creating part
+  * ``` w ``` write part
+
+###### 9.4 Creating filesystems
+
+``` mkfs [TAB-TAB]``` view filesystem format command
+``` mkfs.xfs /dev/sdb1 ``` foarmatted partitions xfs
+``` mkfs.ext4 /dev/sdb1 ``` formatted partition ext4
+
+###### 9.5 Creating filesystems
+
+``` mount /dev/sdb1 /mnt ``` mount /dev/sdb1 and mnt
+``` lsof /mnt ``` list open files in mnt
+``` mount ``` view all mount
+``` mount | grep '^dev' ``` view mount only device
+``` findmnt ``` view mount
+``` umount /mnt ``` disconnect device mount
+
+###### Lesson 9 Command Review
+
+- ``` lsblk ```
+- ``` fdisk ```
+- ``` partprobe ```
+- ``` gdisk ```
+- ``` mkfs ```
+- ``` mount ```
+- ``` findmnt ```
+- ``` umount ```
+- ``` lsof ```
+
+###### Lab Questions 
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-8.png)
+
+###### Lab Solutions 
+
+- Q1: ``` gdisk /dev/sdb ```
+      * ``` p - n - 2 - enter - enter - +1G - enter - w - Y ```
+- Q2: ``` mkfs.ext4 /dev/sdb2 ```
+- Q3: ``` mount /dev/sdb2 /mnt ```
+
 ## Module 3: Networking
-### Lesson 8: Configuring Networking
-###### 8.1 Summarizing IPv4 Basics
+### Lesson 9: Configuring Networking
+###### 9.1 Summarizing IPv4 Basics
 ![img](https://github.com/Bes0n/LFCS/blob/master/images/img8.JPG)
 
 ###### 8.2 Summarizing IPv6 Basics
