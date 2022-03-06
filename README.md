@@ -921,10 +921,10 @@ Put limitation to the user for using disk space.
 
 ## Module 3: Networking
 ### Lesson 10: Configuring Networking
-###### 9.1 Summarizing IPv4 Basics
+###### 10.1 Summarizing IPv4 Basics
 ![img](https://github.com/Bes0n/LFCS/blob/master/images/img8.JPG)
 
-###### 8.2 Summarizing IPv6 Basics
+###### 10.2 Summarizing IPv6 Basics
 ![img](https://github.com/Bes0n/LFCS/blob/master/images/img9.JPG)
 
 - Predefined IPv6 Addresses
@@ -933,7 +933,7 @@ Put limitation to the user for using disk space.
 - Obtaining an IPv6 Address 
 ![img](https://github.com/Bes0n/LFCS/blob/master/images/img11.JPG)
 
-###### 8.3 Applying Run time Network Configuration
+###### 10.3 Applying Run time Network Configuration
 - ``` ip ```- monitor your network in run time. 
 - ```ip link show``` - information about network interfaces
 - ```ip address show``` - get all ip addresses
@@ -941,11 +941,11 @@ Put limitation to the user for using disk space.
 - ```ifconfig | help``` - shouldn't be used anymore
 - ```ip route show``` - get information about routes
 
-###### 8.4 Understanding Network Device Naming
+###### 10.4 Understanding Network Device Naming
 - **biosdevname** - uses device names that reveal information about physical location. 
 ![img](https://github.com/Bes0n/LFCS/blob/master/images/img12.JPG)
 
-###### 8.5 Applying Persistent Network Configuration in CentOS
+###### 10.5 Applying Persistent Network Configuration in CentOS
 - ```cat /etc/redhat-release``` - check your release version
 - ```nmtui``` - network manager user interface
 - ```nmcli``` - network manager command line
@@ -955,23 +955,23 @@ Put limitation to the user for using disk space.
 - ```nmcli connection up ens33``` - enable network interface
 - ```cd /etc/sysconfig/network-scripts``` - network configuration stored in this directory. 
 
-###### 8.6 Applying Persistent Network Configuration in SUSE
+###### 10.6 Applying Persistent Network Configuration in SUSE
 - ```yast``` - generic SUSE configuration tool. From this configuration tool we can manage system settings. 
 
-###### 8.7 Applying Persistent Network Configuration in Ubuntu
+###### 10.7 Applying Persistent Network Configuration in Ubuntu
 - ```cd /etc/network/``` - network interfaces directory
 
 ![img](https://github.com/Bes0n/LFCS/blob/master/images/img13.JPG)
 
 - ``` ifdown ens33 ``` and then ```ifup ens33``` - reload network interface to apply changes to the network interface. 
 
-###### 8.8 Managing Host Names
+###### 10.8 Managing Host Names
 - ``` /etc/hostname ``` - where hostname information stored
 - ``` uname -a ``` - get information about machine 
 - ``` cd /proc/sys/kernel ``` - information about hostname also written here.  
 - ``` vim /etc/hosts ```- configuration of hostname resolving
 
-###### 8.9 Managing Host Name Resolution
+###### 10.9 Managing Host Name Resolution
 - ```vim /etc/resolv.conf``` - configuration file of dns. 
 
 ```
@@ -990,7 +990,7 @@ hosts:      files dns myhostname
 ```
 *As we can see hostname comes first, dns second and myhostname is last*
 
-###### 8.10 Using Common Network Tools
+###### 10.10 Using Common Network Tools
 - ```ping``` - test response of other hosts
 
 Let's ping google.com
@@ -1062,8 +1062,8 @@ PORT   STATE SERVICE
 22/tcp open  ssh
 ```
 
-### Lesson 9: Configuring the SSH Service
-###### 9.1 Configuring the SSH Service
+### Lesson 11: Configuring the SSH Service
+###### 11.1 Configuring the SSH Service
 - ```/etc/ssh/``` - directory where ssh configuration files stored. 
 - ```/etc/ssh/sshd_config``` - server configuration config and sshd process configuration
 - ```/etc/ssh/ssh_config``` - configuration for the ssh client
@@ -1097,7 +1097,7 @@ Important lines for **sshd_config** file:
 #   GSSAPITrustDNS no
 ```
 
-###### 9.2 Starting and Enabling the SSH Service
+###### 11.2 Starting and Enabling the SSH Service
 - ```systemctl status sshd``` - get information about **sshd** service 
 
 ```
@@ -1118,20 +1118,20 @@ Aug 06 11:52:45 centos.example.com systemd[1]: Stopped OpenSSH server daemon.
 - ```systemctl stop|start|restart sshd``` - to stop, start and restart your service. If you make any change in configuration file you need to restart your service.
 - ```systemctl disable|enable sshd``` - disable or enable sshd service for startup behaviour. 
 
-###### 9.3 Using ssh to Connect to SSH
+###### 11.3 Using ssh to Connect to SSH
 - ```ssh student@192.168.4.240``` - log on as *student* on *192.168.4.240*
 - ```ssh -X student@192.168.4.240``` enable graphical interface while connect by ssh. You can run any graphical application by simply running name of the application. For instance: ```gedit &```
 - ``` ssh-keygen ``` - will generate public and private keys, which can be used to authenticate on the server by using these keys instead of password prompt. Private key can be secured by **passphrase**
 - ``` ssh-copy-id student@192.168.4.240``` - transfer your public key to remote host, so you can log on using private key, without password prompt.
 
-###### 9.4 Using scp to Securely Copy Files Over the Network
+###### 11.4 Using scp to Securely Copy Files Over the Network
 - ```scp /etc/hosts 192.168.4.240:/tmp``` - copy **/etc/hosts** to the **192.168.4.240** host in **/tmp** directory
 - ```scp 192.168.4.240:/etc/passwd .``` - copy **/etc/passwd** from remote host **192.168.4.240** to your home directory. 
 
-###### 9.5 Managing File Synchronization using rsync
+###### 11.5 Managing File Synchronization using rsync
 - ```rsync -avz /tmp student@192.168.4.240:/home/student/tmp``` - will syncronize local **/tmp** directory on remote host **192.168.4.240**. Useful if you need to syncronize large amount of data.
 
-### Lesson 10: Configuring a Firewall
+### Lesson 12: Configuring a Firewall
 ###### 10.1 Understanding Linux Firewalling
 - **netfilter** - linux kernel firewalling functionality. 
 - **iptables** - utility which takes care of firewalling
