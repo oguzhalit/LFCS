@@ -952,6 +952,30 @@ Put limitation to the user for using disk space.
 - **biosdevname** - uses device names that reveal information about physical location. 
 ![img](https://github.com/Bes0n/LFCS/blob/master/images/img12.JPG)
 
+###### 10.5 Managing Host Names
+
+- ``` hostname ``` - return fqdn
+- ``` hostname -I ``` all ip addr returns
+- ``` cat /etc/hostname ``` get hostname
+- ``` hostnamectl ``` control the hostname
+- ``` hostnamectl status ``` details hostname
+- ``` uname -a ``` details hostname 
+- ``` hostnamectl set-hostname newhostname ``` set hostname (exit & login)
+
+###### 10.6 Managing Host Name Resolution
+
+- ``` /etc/hosts ``` add fake host
+- ``` /etc/nsswitch.conf ``` # dns taramalarının sırası belirtilir.
+
+###### 10.7 Using Common Network Tools
+
+- ``` ping -f -s 4096 google.com ``` ping boomm
+- ``` netstat -tulpen ``` get listening port
+- ``` ss -tuna ``` socket stats informations
+- ``` nmap ip_addr ```  scan open ports ip_addr
+- ``` dig nu.nl ``` dns information
+
+
 ###### 10.5 Applying Persistent Network Configuration in CentOS
 - ```cat /etc/redhat-release``` - check your release version
 - ```nmtui``` - network manager user interface
@@ -977,6 +1001,7 @@ Put limitation to the user for using disk space.
 - ``` uname -a ``` - get information about machine 
 - ``` cd /proc/sys/kernel ``` - information about hostname also written here.  
 - ``` vim /etc/hosts ```- configuration of hostname resolving
+- ``` /etc/services ``` 
 
 ###### 10.9 Managing Host Name Resolution
 - ```vim /etc/resolv.conf``` - configuration file of dns. 
@@ -1068,6 +1093,26 @@ Not shown: 999 closed ports
 PORT   STATE SERVICE
 22/tcp open  ssh
 ```
+
+###### Lesson 10 Command Review
+
+- ``` ip a ```
+- ``` ip a dev eth0 1.2.3.4/8 ```
+- ``` ip route show ```
+- ``` cat /etc/resolv.conf ```
+- ``` ping ```
+- ```dhclient ```
+- ```netstat ```
+- ``` ss ```
+- ``` dig ```
+- ``` nmap ```
+- ``` hostname ```
+- ``` hostnamectl ```
+- ``` uname ```
+
+###### Lab Questions
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-10.png)
 
 ### Lesson 11: Configuring the SSH Service
 ###### 11.1 Configuring the SSH Service
