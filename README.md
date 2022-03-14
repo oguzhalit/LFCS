@@ -1114,6 +1114,27 @@ PORT   STATE SERVICE
 
 ![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-10.png)
 
+### Lesson 11: Managing Time
+- ``` hardware time -> system time -> NTP ``` 
+
+###### 11.2 Managing Linux Time
+
+- ``` date ``` - show current time, system time
+- ``` date -s 14:53 ``` set time
+- ``` hwclock ``` hardware time
+- ``` timedatectl ``` - time control utilization
+- ``` timedatectl list-timezones ``` list timezone
+- ``` timedatectl set-timezone Europe/Istanbul
+
+###### 11.3 Understanding the NTP Protocol
+
+
+- https://orolia.com/manuals/SS/Content/_Global/Topics/NTP/NTP_Stratums.htm
+- iburst
+
+
+###### 11.4 Configuring Time Synchronization
+
 ### Lesson 11: Configuring the SSH Service
 ###### 11.1 Configuring the SSH Service
 - ```/etc/ssh/``` - directory where ssh configuration files stored. 
