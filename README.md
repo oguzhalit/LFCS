@@ -940,6 +940,13 @@ Put limitation to the user for using disk space.
 - ```ip address add dev ens33 10.0.0.10/24``` - add secondary IP address for devices named **ens33**. After reboot this IP will gone. You need persistent IP address. 
 - ```ifconfig | help``` - shouldn't be used anymore
 - ```ip route show``` - get information about routes
+- ```cat /etc/resolv.conf ``` - dns nameserver (ping to resolve this nameserver) (if not contain ns error Name or service not known)
+- ``` ip route del default via 192.168.4.2 ``` - route delete (if deleted network is unreacheable)
+- ``` ip route add default via 192.168.4.2 ``` - route add 
+- ``` ip addr del dev ens33 192.168.4.249/24 ``` - name or service not know
+- ``` dhclient ``` - dhcp client re-obtain ip-v4 address
+- ``` ip addr add dev ens33 10.0.0.10/24 ``` set manually ip address, secondry ip addr
+- ``` ifconfig ``` get network information
 
 ###### 10.4 Understanding Network Device Naming
 - **biosdevname** - uses device names that reveal information about physical location. 
