@@ -1120,11 +1120,11 @@ PORT   STATE SERVICE
 ###### 11.2 Managing Linux Time
 
 - ``` date ``` - show current time, system time
-- ``` date -s 14:53 ``` set time
-- ``` hwclock ``` hardware time
+- ``` date -s 14:53 ``` - set time
+- ``` hwclock ``` - hardware time
 - ``` timedatectl ``` - time control utilization
-- ``` timedatectl list-timezones ``` list timezone
-- ``` timedatectl set-timezone Europe/Istanbul
+- ``` timedatectl list-timezones ``` - list timezone
+- ``` timedatectl set-timezone Europe/Istanbul ```- set timezone
 
 ###### 11.3 Understanding the NTP Protocol
 
@@ -1134,6 +1134,46 @@ PORT   STATE SERVICE
 
 
 ###### 11.4 Configuring Time Synchronization
+
+- ``` timedatectl status ``` ntp(Network time protocol) sync
+- ``` chronyc sources``` information time source
+- ``` ntpdate pool.ntp.org ```  fetch time pool.ntp.org, time problem fix it
+
+###### Lesson 11 Command Review
+
+- ``` date ```
+- ``` hwclock ```
+- ``` timedatectl ```
+- ``` ntpdate ```
+- ``` ntpq ```
+- ``` chronyc ```
+
+###### Lesson 11 Lab
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-11.png)
+
+### Lesson 12: Working with Systemd
+###### 12.1 Understanding Systemd
+
+- ``` /usr/lib/systemd/system ``` - default units
+- ``` /etc/systemd ```  - custom units
+
+###### 12.2 Understanding Systemd
+
+- ``` systemctl -t help ``` - show unit types
+- ``` systemctl list-unit-files ``` - list all installed units
+- ``` systemctl list-units ``` - list active units
+- ``` systemctl enable name.service ``` - enable but doesn't start a service
+- ``` systemctl start name.service ``` - starts a service
+- ``` systemctl disable name.service ``` - disable but doesn't stop a service
+- ``` systemctl stop name.service ``` - stops a service
+- ``` systemctl status name.service ``` gives information about the service
+
+
+- ``` vendor preset: disabled ``` - after installing, it doesnt get enabled automatically
+- ``` name.service; disabled ``` automatically be started after restart(enable)
+- ``` Active: inactive (dead) ``` - not currently ruunning 
+
 
 ### Lesson 11: Configuring the SSH Service
 ###### 11.1 Configuring the SSH Service
