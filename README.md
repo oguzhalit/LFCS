@@ -1360,6 +1360,41 @@ init = systemd
 
 ![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-15.png)
 
+### Lesson 16: Reading Log Files
+###### 16.1 Understanding Linux Logging
+
+- Syslog is the legacy service that takes care of logging
+- Syslog on modern Linux is implemented through rsyslogd
+- systemd-journald is a systemd-integrated log service
+
+###### 16.2 Working with journalctl
+
+- ``` journalctl ``` show the complete journal
+- ``` journalctl -u <unit> ``` shows informations about specific unit
+- ``` journalctl --dmesg ``` shows kernel messages
+- ``` journal -u crond --since yesterday --until 9:00 -p info ```
+
+###### 16.3 Understanding Rsyslog
+
+- The ```rsyslogd``` service works with facility, priority and destination
+- The facility is what ```rsyslogd``` should be logging for
+- The priority indicates the severity of a log event
+- ``` ls /etc/rsyslog.* ```
+- ``` vim /etc/rsyslog.conf ```
+- ``` logger hello && tail /var/log/messages ```
+
+
+###### 16.4 Lesson 16 Command Review
+
+- ``` journalctl ```
+- ``` tail ```
+- ``` less ```
+- ``` logger ```
+
+###### Lesson 16 Lab: Working with Logging
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-16.png)
+
 ### Lesson 11: Configuring the SSH Service
 ###### 11.1 Configuring the SSH Service
 - ```/etc/ssh/``` - directory where ssh configuration files stored. 
