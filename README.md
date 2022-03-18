@@ -1174,6 +1174,191 @@ PORT   STATE SERVICE
 - ``` name.service; disabled ``` automatically be started after restart(enable)
 - ``` Active: inactive (dead) ``` - not currently ruunning 
 
+###### 12.3 Modifying Service Configuration
+
+- ``` systemctl cat name.service ``` reads current unit configuration
+- ``` systemctl show ``` shows all available configuration parameters
+- ``` systemctl edit name.service ``` allows you to edit service configuration
+- ``` systemctl daemon-reload ``` modifying service configuration
+- ``` systemctl restart name.service ``` restart the service
+
+
+
+###### 12.4 Understanding Targets
+
+- A target is group of services
+- Some targets are isolatable 
+  * emergency.target
+  * rescue.target
+  * multi-user.target
+  * graphical.target
+
+- ``` systemctl list-dependencies name.target ``` - see the contents and dependencies of a systemd target
+
+###### 12.5 Managing Targets
+
+- ``` systemctl start name.target ```
+- ``` systemctl isolate name.target ```
+- ``` systemctl list-dependencies name.target ```
+- ``` systemctl get-default ```
+- ``` systemctl set-default name.target ```
+
+###### Lesson 12 Command Review
+
+- ``` systemctl start ```
+- ``` systemctl status ```
+- ``` systemctl stop ```
+- ``` systemctl enable ```
+- ``` systemctl disable ```
+- ``` systemctl list-units ```
+- ``` systemctl set-default ```
+- ``` systemctl get-default ```
+- ``` systemctl cat ```
+- ``` systemctl show ```
+- ``` systemctl edit ```
+- ``` systemctl deamon-reload ```
+- ``` systemctl isolate ```
+- ``` systemctl list-dependencies ```
+
+###### Lesson 12 Lab
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-12.png)
+
+### Lesson 13: Process Management
+###### 13.1 Understanding Linux Processes and Jobs
+
+init = systemd
+----------|> http
+----------|> sshd
+--------------|> bash
+-----------------|> echo
+----------|> job
+
+###### 13.2 Managing Interactive Shell Jobs
+
+``` dd if=/dev/zero of=/dev/null & ``` run job background
+``` bg ```
+``` jobs ``` view jobs
+``` fg ``` 
+
+###### 13.3 Monitoring Processes with top
+
+``` top ``` active proc view
+``` htop ```
+
+###### 13.4 Changing top Display Properties
+
+``` top -u user ``` specific user proc view
+``` top + f ``` edit field, select [:space:]
+``` top + 1 ```
+``` top + 2 ```
+``` top + z ``` change color
+``` cd ~/.toprc ``` current display settings 
+
+###### 13.5 Monitoring Process Properties with ps
+
+``` ps aux | less ``` - view running process
+``` ps aux | grep proc ```
+``` ps -ef ``` same information, diffrent way
+``` ps fax ``` graphical display showing, parent process
+``` ps aux --sort pmem | less ``` sort mem uses
+``` free -mh ``` information memory and swap
+ 
+###### 13.6 Changing Process Priority
+
+``` renice ``` change priority
+``` renice -n 5 pid ``` set renice
+``` nice ``` similear renice
+``` nice -n 20 command ``` run priority nice command
+
+###### 13.7 Managing Processes with kill
+
+``` man 7 signal ``` for signal item
+``` ps aux | grep command ``` find process
+``` kill -9 command_pid ``` 
+``` killall ``` 
+
+###### 13.8 Lesson 13 Command Review
+
+``` top ```
+``` ps ```
+``` jobs ```
+``` fg ```
+``` bg ```
+``` nice ```
+``` renice ```
+``` kill ```
+``` killall ```
+
+###### Lesson 13 Lab: Managing Processes
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-13.png)
+
+### Lesson 14: Managing Software
+
+``` ldd /usr/bin/passwd ``` passwd command required libarry
+``` dpkp -i package_name ```
+``` /etc/apt/sources.list ``` apt repo
+``` apt search nmap ```
+``` apt install nmap ```
+``` autoremove ```
+
+
+###### 14.8 Lesson 14 Command Review
+
+``` rpm ```
+``` yum ```
+``` dnf ```
+``` yumdownloader ```
+``` apt ```
+
+###### Lesson 14 Lab: Managing Software
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-14.png)
+
+### Lesson 15: Scheduling Tasks
+###### 15.1 Understanding Linux Task Scheduling
+
+- cron: the classical solution, allows you to schedule re-occuring tasks
+  * uses the crond daemon
+  * use crontab -e to edit tasks
+- at: for tasks that need to run once only
+  * uses the atd daemon
+  * uses at to schedule the tasks
+- systemd timers: the newer  alternative to cron jobs
+  * create a .timer unit and run it using systemctl
+
+###### 15.2 Scheduling Tasks with cron
+
+- ``` systemctl status crond ``` 
+- ``` vim /etc/crontab ```
+- ``` crontab -e ```
+- ``` cd /etc/cron.d ```
+- ``` vim sysstat ``` 
+- ``` less /var/log/messages ```
+
+###### 15.3 Using systemd Timers
+
+- ``` cd /usr/lib/systemd/system && ls *timer ```
+- ``` systemctl status example.timer ```
+- ``` man -k systemd | grep timer ```
+- ``` man systemd.timer ```
+- ``` systemd status atd ```
+- ``` at 12:12 - poweroff - logger hello - <EOT> ```
+- ``` atq ``` 
+- ``` atrm ```
+
+###### 15.5 Lesson 15 Command Review
+
+- ``` at ```
+- ``` atq ```
+- ``` atrm ```
+- ``` crontab -e ```
+- ``` systemctl ```
+
+###### Lesson 15 Lab: Scheduling Tasks
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-15.png)
 
 ### Lesson 11: Configuring the SSH Service
 ###### 11.1 Configuring the SSH Service
