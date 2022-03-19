@@ -2235,6 +2235,102 @@ total 20
 -rw-r--r--. 1 root root 100 Oct 31  2018 wpa_supplicant
 -rw-r--r--. 1 root root 103 Nov  5  2018 yum
 ```
+## Module 1: Essential Commands
+### Lesson 1: An Introduction to Bash Shell Scripting
+###### 16.1 Understanding the Role of the Linux Kernel
+
+- A shell script can be as simple as a number of commands that is seq executed
+
+###### 1.2 Essential Shell Script Components
+```
+#!/bin/bash
+#
+# some explanation
+
+echo what dir do you wat to go to ?
+
+read DIR
+
+cd $DIR
+pwd
+ls
+
+exit 0
+```
+
+###### 1.3 Using Loops in Shell Scripts
+
+* if ... theb ... fi
+* while ... do ... done
+* until ... do ... done
+* case ... in ... esac
+* for ... in ... do ... done 
+
+```
+#!/bin/bash
+
+if [ -z $1 ]
+then
+	echo you have to provide an argument
+        exit 6
+fi
+
+echo the arument is $1
+```
+* while example
+```
+#!/bin/bash
+
+COUNTER=$1
+COUNTER=$(( COUNTER * 60 ))
+
+minusone(){
+	COUNTER=$(( COUNTER - 1 ))
+	sleep 1
+}
+
+while [ $COUNTER -gt 0 ]
+do
+	echo you still have $COUNTER seconds left
+        minusone
+done
+
+[ $COUNTER = 0 ] && echo time is up && minusone
+[ $COUNTER = "-1" ] && echo you now are one second late && minusone
+
+while true
+do
+	echo you now are ${COUNTER#-} seconds late
+	minusone
+done
+
+```
+###### Lesson 1 Lab: Writing Shell Scripts
+
+![img](https://github.com/oguzhalit/LFCS-2/blob/master/images/LFCS-17-1.png)
+
+###### Lesson 1 Lab Solution: Writing Shell Scripts
+```
+cat ldapusers
+cn=lisa,dc=example,dc=com
+cn=amy,dc=example,dc=com
+```
+```
+#!/bin/bash
+# extract the user names
+for i in $(cat ldapusers)
+do
+    USER=${i%%,*}
+    USER=${USER#+=}
+    echo $USER >> users
+done
+
+# show user creation
+for j in $(cat users)
+do
+    echo useradd $j
+done
+```
 
 ### Lesson 16: Basic Kernel Management
 ###### 16.1 Understanding the Role of the Linux Kernel
