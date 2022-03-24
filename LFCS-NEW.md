@@ -95,6 +95,42 @@ We will use several distributions:
 * Ubuntu
 * SUSE - OpenSUSE
 
+###### Linux Boot Seq
+
+* Linux boot process
+
+BIOS POST -> Boot Loader(GRUB2) -> Kernel İnitilazition -> INIT Process(system)
+
+BIOS POST = POST stands for power-on
+BOOT LOADER = /BOOT file system upload
+KERNEL INIT = kernel loaded
+INIT Process = systemd loaded
+
+* Runlevels - Systemd Targets
+
+``` runlevel ``` show current runlevel
+``` systemctl get-default ``` get default runlevel
+``` systemctl set-default multi-user.target ``` change default runlevel
+
+- 5 Boots into a GUI ``` graphical.target ```
+- 3 Boots into a CLI ``` multiuser.target ```
+
+```
+runlevel 0 -> poweroff.target
+
+runlevel 1 -> rescue.target
+
+runlevel 2 -> multi-user.target
+
+runlevel 3 -> multi-user.target
+
+runlevel 4 -> multi-user.target
+
+runlevel 5 -> graphical.target
+
+runlevel 6 -> reboot.target
+```
+
 ### Lesson 2: Using Essential Tools
 
 ###### Common linux commands 
