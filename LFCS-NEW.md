@@ -237,6 +237,18 @@ Example: ``` ls [a-d]??* ``` - list word starting with 'a' to 'd', have '??' at 
 - ``` rmdir videos/ ``` - remove empty directory
 - ``` rm -rf ``` - remove directory forcely. Even if directory has a files in it. 
 
+###### 3.5 Working with Hardware
+
+- ``` dmesg ``` - get informations hardware
+- ``` udevadm info --query=path --name=/dev/sda5 ``` - device information 
+- ``` udevamd monitor ``` - watch hardware attach
+- ``` lspci ``` - display information all devices (video cart, wireless adapter etc)
+- ``` lsblk ``` - list physical disk
+- ``` lscpu ``` - display information cpu
+- ``` lsmem --summary ``` - display information memory
+- ``` free -mh ``` - get memory informaion
+- ``` lshw ``` - detailed information hardware conf 
+
 ###### 3.6 Using Absolute and Relative Paths
 Absolute path can be:
 - ``` /tmp/data/files/pete ```
