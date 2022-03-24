@@ -593,6 +593,7 @@ Users as groups can have access to resources, files, directories e.t.c
 - ``` useradd -c 'the boss' -G wheel -s /bin/passwd bob ```
 - ``` useradd -s /bin/zsh -c "my user" -m anna ``` - create user on CentOs
 - ``` adduser kate ``` - you will be promted for all requrired information on Ubuntu 
+- ``` chsh ``` - change default shell
 
 ###### 7.4 Creating Groups with groupadd
 - ``` groupadd sales ``` - create group **sales**
@@ -671,6 +672,7 @@ As you can see from image here we can configure number of maximum processes, max
 * ```vipw```
 * ```vigr```
 * ```loginctl```
+* ``` chsh ```
 
 ###### Lab Questions
 
