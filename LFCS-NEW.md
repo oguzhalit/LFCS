@@ -127,6 +127,7 @@ Examples:
 - ``` info coreutils ``` informantion 
 - ``` pinfo coreutils ``` information commands
 - ``` su - ``` - switch for root user
+- ``` whatis ls ``` - information ls
 
 ###### Common bash features
 
@@ -156,6 +157,7 @@ Examples:
 * ``` touch ```
 * ``` last ```
 * ``` man ```
+* ``` whatis ```
 * ``` apropos ```
 * ``` mandb ```
 * ``` pinfo ```
